@@ -48,6 +48,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faker (1.0.1)
+      i18n (~> 0.4)
     fssm (0.2.9)
     haml (3.1.7)
     haml-rails (0.3.4)
@@ -158,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)
+  faker
   haml-rails
   jader
   kaminari
