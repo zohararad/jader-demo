@@ -5,6 +5,7 @@ gem 'haml-rails'
 gem 'spine-rails'
 gem 'jader'
 gem 'mongoid', '~> 3.0.0'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.
