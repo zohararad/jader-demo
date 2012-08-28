@@ -16,5 +16,10 @@
     %header#app-header
       %h1 Welcome to Jader Example
       %h3.subheader A simple Rails app to demonstrate the power of Jader and Spine.js
-    = yield
+    %div#app-content
+      %div#yield.active= yield
   = javascript_include_tag "application"
+  :javascript
+    $(document).ready(function(){
+      new App({el:$('#main')});
+    });

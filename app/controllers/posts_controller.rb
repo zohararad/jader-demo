@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     page = params[:page] || 1
-    @posts = Post.page(page).per(10)
+    @posts = Post.page(page).per(5)
     respond_to do |format|
       format.html
       format.json {

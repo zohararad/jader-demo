@@ -11,13 +11,15 @@
 #= require_tree ./views
 
 class App extends Spine.Controller
+
+  @firstLoad: true # we do not render views on first load
+
   constructor: ->
     super
+    App.Post.fetch()
+    @posts = new App.PostsController
+    @append(@posts)
     
-    # Initialize controllers:
-    #  @append(@items = new App.Items)
-    #  ...
-    
-    Spine.Route.setup()    
+    Spine.Route.setup(history:true)
 
 window.App = App

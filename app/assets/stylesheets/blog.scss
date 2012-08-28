@@ -1,5 +1,9 @@
 @import "foundation_and_overrides";
 
+.stack > *:not(.active) {
+  display: none
+}
+
 #app-header{
   border-bottom: 1px solid $secondaryColor;
 }
@@ -7,6 +11,7 @@
 .post{
   margin-bottom: $importantModNum;
 }
+
 .post-title h1{
   font-size: ms(4);
   color: #6F6F6F;

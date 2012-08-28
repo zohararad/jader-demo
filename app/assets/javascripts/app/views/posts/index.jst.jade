@@ -2,7 +2,7 @@
   article.post
     header.post-title
       h1
-        a(href="#{routes.post_path(post._id)}", title="#{post.title}")= post.title
+        a(href="#{router.post_path(post.id)}", title="#{post.title}", data-id="#{post.id}")= post.title
     div.post-content
       != post.content
     footer.post-footer
