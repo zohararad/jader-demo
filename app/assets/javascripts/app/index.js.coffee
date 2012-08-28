@@ -18,8 +18,7 @@ class App extends Spine.Controller
     super
     App.Post.fetch()
     @posts = new App.PostsController
-    @append(@posts)
-    
+
     Spine.Route.setup(history:true)
 
 window.App = App

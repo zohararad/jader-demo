@@ -12,13 +12,30 @@
   = stylesheet_link_tag "application"
   = csrf_meta_tags
 %body.row
-  %div#main.twelve.columns.centered
+  %div.twelve.columns.centered
     %header#app-header
       %h1 Welcome to Jader Example
       %h3.subheader A simple Rails app to demonstrate the power of Jader and Spine.js
-    %div#app-content
-      %div#yield.active= yield
+    %div#main.row
+      %div#app-content.columns.nine
+        %div#yield.active= yield
+      %aside.columns.three
+        %div.panel
+          %h4 Jader you say?
+          %p
+            Jader is a server and client side Jade template compiler for Rails. Its supposed to help you write SEO-friendly
+            single-page applications by letting you share views between your client-side app and the server.
+          %p
+            This app is a very simple blog, built on Rails and Spine.js that demonstrates the basics of using Jader with Spine.js.
+          %p
+            You can learn more about Jader on
+            %a{:href => 'https://github.com/zohararad/jader'} Github
+          %p
+            You can learn more about Spine.js on
+            %a{:href => 'http://spinejs.com'} spinejs.com
+
   = javascript_include_tag "application"
+
   :javascript
     $(document).ready(function(){
       new App({el:$('#main')});
