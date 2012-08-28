@@ -8,10 +8,13 @@
 %head
   %meta{:charset => "utf-8"}
   %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-  %title= content_for?(:title) ? yield(:title) : "Untitled"
+  %title Jader by Example
   = stylesheet_link_tag "application"
   = csrf_meta_tags
-%body
-  %div#main
+%body.row
+  %div#main.twelve.columns.centered
+    %header#app-header
+      %h1 Welcome to Jader Example
+      %h3.subheader A simple Rails app to demonstrate the power of Jader and Spine.js
     = yield
   = javascript_include_tag "application"

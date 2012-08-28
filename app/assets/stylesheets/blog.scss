@@ -1,0 +1,28 @@
+@import "foundation_and_overrides";
+
+#app-header{
+  border-bottom: 1px solid $secondaryColor;
+}
+
+.post{
+  margin-bottom: $importantModNum;
+}
+.post-title h1{
+  font-size: ms(4);
+  color: #6F6F6F;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.post-title h1 a{
+  color: inherit;
+}
+
+.post-title h1 a:hover{
+  color: darken(#6F6F6F,10%);
+}
+
+.post-footer{
+  color: $mainColor;
+  font-size: ms(0);
+}

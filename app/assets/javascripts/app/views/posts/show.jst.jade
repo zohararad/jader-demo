@@ -1,0 +1,14 @@
+article.post
+  header.post-title
+    h1= post.title
+  div.post-content
+    != post.content
+  footer.post-footer
+    p
+      strong Posted on:&nbsp;
+      = post.created_at
+  - if(post.comments.length > 0)
+    h3 Comments
+    ol.post-comments
+      - each comment in post.comments
+        li.comment= comment.content

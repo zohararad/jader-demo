@@ -1,0 +1,31 @@
+<%
+  routes = Rails.application.routes.routes.map do |route|
+    {
+      :alias => (route.name || ''),
+      :path => route.path.spec.to_s.gsub(/\(\.\:format\)/,''),
+      :controller => route.defaults[:controller],
+      :action => route.defaults[:action]
+    }
+
+  end.reject{ |route|
+    ['new','create','edit','update','destroy'].include?(route[:action]) ||
+    route[:alias].blank? ||
+    route[:alias] == 'rails_info_properties'
+  }
+%>
+
+function generateRoutes(){
+  var routes = <%= routes.to_json %>;
+  var r = {};
+  routes.forEach(function(route){
+    r[route.alias + '_path'] = function(){
+      var args = [].slice.call(arguments,0);
+      return route.path.replace(/(\:[\w_]+)/g, function(m){
+        return args.shift();
+      });
+    }
+  });
+  return r;
+}
+
+var routes = generateRoutes();

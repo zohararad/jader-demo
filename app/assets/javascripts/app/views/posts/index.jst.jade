@@ -1,0 +1,17 @@
+- each post in posts
+  article.post
+    header.post-title
+      h1
+        a(href="#{routes.post_path(post._id)}", title="#{post.title}")= post.title
+    div.post-content
+      != post.content
+    footer.post-footer
+      p
+        strong Posted on:&nbsp;
+        = post.created_at
+        &nbsp;/&nbsp;
+        strong= post.comments.length + '&nbsp;'
+        - if(post.comments.length === 1)
+          = 'Comment'
+        - else
+          = 'Comments'
