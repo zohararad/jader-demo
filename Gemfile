@@ -23,3 +23,4 @@ end
 gem 'jquery-rails'
 gem 'rspec-rails', :groups => [:development, :test]
 gem 'faker'
+gem 'unicorn', :group => :production
