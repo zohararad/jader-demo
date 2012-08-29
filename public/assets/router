@@ -1,1 +1,0 @@
-function generateRoutes(){var e=[];e.forEach(function(e){router[e.alias+"_path"]=function(){var t=[].slice.call(arguments,0);return e.path.replace(/(\:[\w_]+)/g,function(e){return t.shift()})}})}var router={};generateRoutes();
