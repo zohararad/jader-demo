@@ -11,5 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jade/runtime
+//= require router
 //= require jquery
 //= require app
