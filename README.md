@@ -29,5 +29,4 @@ You should look more closely at:
 * `app/assets/javascripts/app/controllers/application_controller.js.coffee`
   * Note the logic of determining whether Spine should or shouldn't render a view based on first page load
   * Note the dynamic injection of the server-rendered part into Spine's active stack view element
-* `app/assets/javascripts/app/lib/routes.js.erb` - A little trick to expose Rails routes to Spine
 * `config/initializers/jader.rb` - Jader's configuration
